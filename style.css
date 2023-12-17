@@ -1,8 +1,8 @@
 .main-wrapper {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    height: 800px;
+   min-height:  800px;
 }
 
 .main-img {
@@ -336,4 +336,38 @@ small {
 .menu {
     display: flex;
     gap: 24px
+}
+
+
+/*------------------------Адаптив под планшеты-------------------------------------*/
+
+@media screen  and (max-width: 1400px){
+    .main-wrapper{
+        flex-direction: column;
+    }
+    .main-info{
+        align-self: flex-start;
+        margin: 100px 0 80px;
+    }
+    .main-img{
+        align-self: center;
+    }
+    .table{
+        width: 940px;
+    }
+    .table-wrapper{
+        overflow-x: auto;
+        width: 100%;
+        max-width: 940px;
+    }
+    .account-wrapper{
+        flex-direction: column;
+        gap: 70px;
+    }
+    .create-account-section .text{
+        max-width: unset;
+    }
+    form{
+        align-self: center;
+    }
 }
