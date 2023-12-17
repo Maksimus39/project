@@ -22,6 +22,9 @@
     letter-spacing: 1.4px;
     text-transform: uppercase;
 }
+.menu-icon{
+    display: none;
+}
 
 .main-title {
     color: #363940;
@@ -64,6 +67,8 @@
 html,
 body {
     font-family: 'Rubik', sans-serif;
+    font-style: normal;
+    min-width: 375px;
 }
 
 a {
@@ -123,6 +128,7 @@ button:hover {
 
 .rates-section.text {
     margin-bottom: 40px;
+    text-align: center;
 }
 
 .title {
@@ -344,6 +350,7 @@ small {
 @media screen  and (max-width: 1400px){
     .main-wrapper{
         flex-direction: column;
+        min-height: auto;
     }
     .main-info{
         align-self: flex-start;
@@ -369,5 +376,32 @@ small {
     }
     form{
         align-self: center;
+    }
+}
+/*------------------Адаптив под мобилки---------------------------------*/
+
+@media screen and (max-width: 576px){
+    .menu{
+        display: none;
+    }
+    .menu-icon{
+        display: block;
+    }
+    .main-info{
+        margin: 60px 0;
+    }
+    .main-title{
+        font-size: 52px;
+        line-height: 60px;
+    }
+    .account-wrapper{
+        gap: 60px;
+    }
+    label{
+        white-space: nowrap;
+    }
+    fieldset{
+        flex-wrap: wrap;
+        row-gap: 20px;
     }
 }
